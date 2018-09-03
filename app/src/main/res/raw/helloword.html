@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Insert title here</title>
+    <script type="text/javascript" charset="UTF-8">
+
+        function onMyClick(type){
+            var myinip = document.getElementById("mmmm");
+            if(type === 0){
+                myinip.value = "我是网页的按钮，调用了里面的方法";
+            }else{
+                myinip.value = "android调用了js里面的代码";
+            }
+//                alert("onMyClick（）我过来啦~");
+            console.log("adfasfasdfaasdfasdfdasdsf");
+            //javascript:control.showToast("欢迎使用native+h5");
+            //  window.location.href='http://www.baidu.com';
+
+
+        }
+        function onMyClick2(){
+            var input = document.getElementById("input01");
+            alert("onMyClick2()我过来啦~");
+        }
+
+        function add2(x,y)
+        {
+            sum = x + y;
+            return sum; //返回函数值,return后面的值叫做返回值。
+        }
+        function changeLink(){
+            document.getElementById('myAnchor').innerHTML="RUNOOB";
+            document.getElementById('myAnchor').href="//www.runoob.com";
+            document.getElementById('myAnchor').target="_blank";
+            document.getElementById("mmmm").value  = "RUNOOB";
+            alert( document.getElementById("mmmm").value)
+        }
+        function getAndroidToast(){
+            window.yuerAndroid.showToastAndroid();
+        }
+
+        function getAndroidDiaolg(){
+            window.yuerAndroid.showDialog();
+        }
+
+        function getAndroidTOken(){
+
+            var  token =    window.yuerAndroid.getLocalToken();
+            var mmmm2 = document.getElementById("mmmm2");
+            var tokenText = "我从android里面获取到token啦~~"+token;
+            mmmm2.value =tokenText;
+            console.log("token",token);
+            alert(tokenText);
+        }
+    </script>
+    <style>
+        .btn01{
+            width: 200px;
+            height: 45px;
+            background-color: chocolate;
+            font-family: Candara;
+            color: black;
+            margin-top: 20px;
+        }
+        .btn02{
+            width: 200px;
+            height: 45px;
+            background-color: chocolate;
+            font-family: Candara;
+            color: black;
+            margin-top: 20px;
+        }
+        #div1{
+            width:100%;
+            height: 350px;
+            line-height: 60px;
+            background-color: rosybrown;
+            text-align: center;
+            flex-direction: column;
+        }
+        .input01{
+            width: 300px;
+            height: 45px;
+            background-color:silver;
+            border: 1px solid rosybrown;
+            margin-top: 20px;
+            color: red;
+            padding-left: 10px;
+        }
+        #div_left{
+            width: 50%;
+            float: left;
+        }
+        #div_right{
+            width: 50%;
+            float: left;
+            height: 100%;
+            background-color: cornflowerblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<table border="1" width="100%" height="500px" style="border: 1px  solid red;background-color: aqua">
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+    </tr>
+</table>
+<div id="div1">
+    <div id="div_left">
+        <a id="myAnchor" href="//www.microsoft.com">Microsoft</a>
+        <div>   <input type="text "  id="mmmm"  class="input01"/></div>
+        <div>  <input type="button" value="获取输入框里面的值" class="btn02" onclick="onMyClick2()" /></div>
+        <div>  <input type="button" value="我要去获取Android的内容啦" class="btn01" onclick="onMyClick(0)" /></div>
+        <input type="button" onclick="changeLink()" value="修改链接">
+
+    </div>
+    <div id="div_right">
+        <div>   <input type="text "  id="mmmm2"  class="input01" placeholder="暂时没有内容" >
+            <div>    <input type="button" onclick="getAndroidToast()" value="调用android的Toast方法"></div>
+            <div>   <input type="button" onclick="getAndroidDiaolg()" value="调用android的Toast方法"></div>
+            <div>    <input type="button" onclick="getAndroidTOken()" value="调用android的Toast方法"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

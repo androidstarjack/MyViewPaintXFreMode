@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yuer.king">
+
+    <application
+        android:allowBackup="true"
+        android:name=".MyApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activty.PaintFoilterColorActivty" />
+        <activity android:name=".activty.PaintFoilterBitmapActivty"/>
+        <activity android:name=".activty.ScratchCardActivty"/>
+        <activity android:name=".activty.CanvasView01Activty"/>
+        <activity android:name=".activty.DrawavleSimple01Activty"/>
+        <activity android:name=".activty.PathMeasureCircleLoadingActivity"/>
+        <activity android:name=".activty.PathSmallFaceActivty"/>
+        <activity android:name=".activty.UnfoldButtonActivty"/>
+        <activity android:name=".activty.REdextTextMainActivity"/>
+        <activity android:name=".activty.SlidingMenuBarActivity" />
+        <activity android:name=".activty.ZoomQQSlideListViewActivity" />
+        <activity android:name=".activty.ChaneseAllMapActivity" />
+        <activity android:name=".activty.SvgTestActivty" />
+        <activity android:name=".activty.TestProgressBarActivity" />
+        <activity android:name=".activty.WebViewHellowActivity" />
+    </application>
+
+</manifest>
